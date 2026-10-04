@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHEM-NAVIGATOR | Offline Mode</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #090d16;
+      color: #f1f5f9;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding: 24px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(14, 165, 233, 0.15);
+      border: 1px solid #0284c7;
+      color: #38bdf8;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      background: #38bdf8;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #38bdf8;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    p.lead {
+      color: #94a3b8;
+      font-size: 1.05rem;
+      margin-bottom: 24px;
+    }
+    .btn {
+      display: inline-block;
+      background: #0284c7;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      margin-right: 10px;
+      margin-bottom: 20px;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #0369a1; }
+    .card {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .card h2 {
+      font-size: 1.25rem;
+      color: #38bdf8;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #1f2937;
+      padding-bottom: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid #1f2937;
+      font-size: 0.95rem;
+    }
+    th {
+      color: #94a3b8;
+      font-weight: 600;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: #f59e0b;
+      background: rgba(245, 158, 11, 0.1);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">
+      <span class="dot"></span> Offline Gas Laws Reference
+    </div>
+    <h1>CHEM-NAVIGATOR</h1>
+    <p class="lead">You are currently offline. All core Chem-Navigator lessons, formulas, and simulations are fully cached and available when opening the main application.</p>
+    
+    <button class="btn" onclick="window.location.href='/'">Return to Application</button>
+    <button class="btn" style="background:#374151" onclick="window.location.reload()">Check Connection</button>
+
+    <div class="card">
+      <h2>Quick Gas Law Formula Reference</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Law</th>
+            <th>Formula</th>
+            <th>Changing Variables</th>
+            <th>Constant</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Boyle's Law</strong></td>
+            <td><code>P₁V₁ = P₂V₂</code></td>
+            <td>Pressure, Volume</td>
+            <td>Temperature, Moles</td>
+          </tr>
+          <tr>
+            <td><strong>Charles's Law</strong></td>
+            <td><code>V₁ / T₁ = V₂ / T₂</code></td>
+            <td>Volume, Temperature</td>
+            <td>Pressure, Moles</td>
+          </tr>
+          <tr>
+            <td><strong>Gay-Lussac's Law</strong></td>
+            <td><code>P₁ / T₁ = P₂ / T₂</code></td>
+            <td>Pressure, Temperature</td>
+            <td>Volume, Moles</td>
+          </tr>
+          <tr>
+            <td><strong>Avogadro's Law</strong></td>
+            <td><code>V₁ / n₁ = V₂ / n₂</code></td>
+            <td>Volume, Moles</td>
+            <td>Pressure, Temp</td>
+          </tr>
+          <tr>
+            <td><strong>Combined Gas Law</strong></td>
+            <td><code>(P₁V₁) / T₁ = (P₂V₂) / T₂</code></td>
+            <td>Pressure, Vol, Temp</td>
+            <td>Moles</td>
+          </tr>
+          <tr>
+            <td><strong>Ideal Gas Law</strong></td>
+            <td><code>PV = nRT</code></td>
+            <td>All 4 Variables</td>
+            <td>R = 0.08206 L·atm/(mol·K)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Golden Gas Law Rules</h2>
+      <ul style="padding-left: 20px; color: #cbd5e1; line-height: 1.8;">
+        <li><strong>Temperature must ALWAYS be in Kelvin:</strong> <code>K = °C + 273.15</code></li>
+        <li><strong>Pressure unit consistency:</strong> <code>1 atm = 760 mmHg = 760 torr = 101.325 kPa</code></li>
+        <li><strong>Standard Temperature &amp; Pressure (STP):</strong> <code>0°C (273.15 K) and 1 atm (101.3 kPa)</code></li>
+        <li><strong>Standard Molar Volume at STP:</strong> <code>1 mole = 22.414 L</code></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

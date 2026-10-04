@@ -1,0 +1,6 @@
+{
+  "name": "CHEM-NAVIGATOR",
+  "description": "Offline Gas Laws & Inorganic Chemistry Learning Laboratory. Understand the Problem. Choose the Law. Build the Formula. Predict the Result.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
